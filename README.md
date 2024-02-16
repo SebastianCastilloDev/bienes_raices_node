@@ -16,3 +16,12 @@ Primero clona el proyecto, con el comando
 
 Para instalar las dependencias del proyecto, ejecuta el comando
 `npm install`
+
+# Guia de desarrollo
+
+En los proyectos de node contamos con dos tipos de dependencias, las dependencias del proyecto y las dependencias de desarrollo. Las dependencias del proyecto son las que se instalan con el comando `npm install` y las dependencias de desarrollo son las que se instalan con el comando `npm install --save-dev`. Las dependencias de desarrollo son las que se utilizan para el desarrollo del proyecto, como por ejemplo, las librerias de testing, las librerias de documentación, etc.
+
+
+Comenzaremos instalando express
+
+`npm install express`
