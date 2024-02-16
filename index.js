@@ -1,4 +1,5 @@
 import express from 'express';
+import usuarioRoutes from './routes/usuarioRoutes.js';
 
 const app = express();
 const port = 3000;
@@ -8,7 +9,4 @@ app.listen(port, ()=> {
 })
 
 // Routing
-app.get('/', function(req, res) {
-    res.send('Hello World');
-})
-
+app.use('/', usuarioRoutes);

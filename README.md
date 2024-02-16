@@ -95,3 +95,50 @@ https://nodejs.org/api/esm.html
 }
 ```
 
+## ¿Qué es el routing?
+
+El routing es el proceso de seleccionar un camino para el tráfico en una red o entre varias redes. En el contexto de una aplicación web, el routing es el proceso de seleccionar una ruta para una petición HTTP.
+
+A través del routing, podemos definir las rutas de nuestra aplicación, es decir, las URL que nuestra aplicación va a manejar.
+
+Podemos definir rutas para distintos tipos de peticiones, como GET, POST, PUT, DELETE, etc.
+
+En estas rutas nuestros usuarios pueden acceder a distintos recursos, como por ejemplo, una página de inicio, un formulario de contacto, un perfil de usuario, etc. 
+
+### Creando un módulo de rutas
+
+Es conveniente separar las rutas de nuestra aplicación en distintos módulos. Para ello, creamos un directorio llamado `routes` en la raiz del proyecto y dentro de este directorio creamos un archivo llamado `usuarioRoutes.js` que contendrá las rutas de nuestra aplicación.
+
+```javascript
+import express from 'express';
+
+const router = express.Router();
+
+// Routing
+router.get('/', function(req, res) {
+    res.send('Hello World');
+})
+
+router.get('/nosotros', function(req, res) {
+    res.send('Nosotros');
+})
+
+export default router;
+```
+
+Para llamar a nuestras rutas en el archivo `index.js` utilizamos el método `app.use` que recibe dos parametros, el primero es la ruta base y el segundo es el módulo de rutas.
+
+```javascript
+app.use('/', usuarioRoutes);
+```
+
+app.use nos permite montar un módulo de rutas en una ruta base. Es decir, todas las rutas que definamos en el módulo de rutas, se montarán en la ruta base que definamos en app.use.
+
+#### app.use
+
+app.use nos va a permitir hacer muchas cosas, como por ejemplo, montar middlewares, montar módulos de rutas, montar archivos estáticos, cookies, etc.
+
+## Middleware de express
+https://expressjs.com/es/guide/writing-middleware.html
+
+Lo que hemos visto hasta este momento es lo que se conoce como middleware en express. Un middleware puede realizar distintas tareas, como por ejemplo, validar la petición, modificar la petición, modificar la respuesta, etc.
