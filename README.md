@@ -56,6 +56,8 @@ Luego, creamos un script en el archivo `package.json` llamado `dev` que ejecute 
 
 ## Creando un servidor con express
 
+https://expressjs.com/es/starter/hello-world.html
+
 En nuestro index.js creamos un servidor con express.
 
 ```javascript
@@ -80,4 +82,16 @@ app.get('/', function(req, res) {
 En la respuesta podemos enviar distintos tipos de datos, como texto, json, archivos, etc.
 
 Existe un método para cada tipo de petición, `app.get`, `app.post`, `app.put`, `app.delete`, `app.patch`, `app.options`, `app.head`, `app.all`
+
+## Habilitando ES Modules en NodeJS
+
+Para habilitar los modulos de ES6 en NodeJS, necesitamos agregar un archivo llamado `package.json` en la raiz del proyecto con el siguiente contenido.
+
+https://nodejs.org/api/esm.html
+
+```json
+{
+    "type": "module"
+}
+```
 
