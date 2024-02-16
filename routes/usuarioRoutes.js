@@ -3,12 +3,12 @@ import express from 'express';
 const router = express.Router();
 
 // Routing
-router.get('/', function(req, res) {
-    res.send('Hello World');
-})
+router.route('/')
+    .get(function(req, res) {
+        res.json({msg: 'Hello World de tipo GET'})
+    })
+    .post(function(req, res) {
+        res.post({msg: 'Hello World de tipo POST'})
+    })
 
-router.get('/nosotros', function(req, res) {
-    res.send('Nosotros');
-})
-
-export default router;
+export default router; 

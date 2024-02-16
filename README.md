@@ -138,7 +138,27 @@ app.use nos permite montar un módulo de rutas en una ruta base. Es decir, todas
 
 app.use nos va a permitir hacer muchas cosas, como por ejemplo, montar middlewares, montar módulos de rutas, montar archivos estáticos, cookies, etc.
 
-## Middleware de express
+### Middleware de express
+
 https://expressjs.com/es/guide/writing-middleware.html
 
 Lo que hemos visto hasta este momento es lo que se conoce como middleware en express. Un middleware puede realizar distintas tareas, como por ejemplo, validar la petición, modificar la petición, modificar la respuesta, etc.
+
+## Realizando peticiones HTTP
+
+Para probar nuestras rutas, podemos utilizar distintas herramientas, como por ejemplo, el navegador, Postman, Insomnia o Thunder Client, el cual funciona como una extensión de Visual Studio Code.
+
+Antes de probar nuestras rutas, podemos reescribir nuestras rutas de una forma mas sencilla
+
+La forma original es esta:
+    
+```javascript
+
+// Routing
+router.get('/', function(req, res) {
+    res.json('Hello World de tipo GET');
+})
+
+router.post('/', function(req, res) {
+    res.send('Hello World de tipo POST');
+})
