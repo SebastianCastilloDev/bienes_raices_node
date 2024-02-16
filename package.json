@@ -4,6 +4,8 @@
   "description": "Proyecto MVC con NodeJS",
   "main": "index.js",
   "scripts": {
+    "start": "node ./index.js",
+    "server": "nodemon ./index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -25,5 +27,8 @@
   "homepage": "https://github.com/SebastianCastilloDev/bienes_raices_node#readme",
   "dependencies": {
     "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.16"
   }
 }
