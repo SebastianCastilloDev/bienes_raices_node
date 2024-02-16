@@ -54,3 +54,16 @@ Luego, creamos un script en el archivo `package.json` llamado `dev` que ejecute 
 }
 ```
 
+## Creando un servidor con express
+
+En nuestro index.js creamos un servidor con express.
+
+```javascript
+const express = require('express');
+const app = express();
+const port = 3000;
+
+app.listen(port, ()=> {
+    console.log(`Server is running on port ${port}`);
+});
+```
