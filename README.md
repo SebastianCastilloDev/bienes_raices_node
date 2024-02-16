@@ -67,3 +67,17 @@ app.listen(port, ()=> {
     console.log(`Server is running on port ${port}`);
 });
 ```
+
+## Creando rutas con express
+
+Para crear rutas con express, utilizamos el método `app.get` que recibe dos parametros, el primero es la ruta y el segundo es un callback que recibe dos parametros, la petición y la respuesta.
+
+```javascript
+app.get('/', function(req, res) {
+    res.send('Hello World');
+})
+```
+En la respuesta podemos enviar distintos tipos de datos, como texto, json, archivos, etc.
+
+Existe un método para cada tipo de petición, `app.get`, `app.post`, `app.put`, `app.delete`, `app.patch`, `app.options`, `app.head`, `app.all`
+
